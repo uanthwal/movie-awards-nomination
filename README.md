@@ -12,9 +12,9 @@ This application allows the users to search OMDB for movies, and nominate the to
 
 
 ## Development server
-Clone the repository using command : ` git clone https://github.com/uanthwal/movie-awards-nomination.git`
-Install all the dependencies using ` npm install `
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Clone the repository using command : ` git clone https://github.com/uanthwal/movie-awards-nomination.git`
+2. Install all the dependencies using ` npm install `
+3. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 
 ## Build
