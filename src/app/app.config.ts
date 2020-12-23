@@ -5,6 +5,6 @@ export var APP_CONFIG = {
 };
 
 export var URL_CONFIG = {
-  BASE_URL: "http://www.omdbapi.com/",
+  BASE_URL: "https://www.omdbapi.com/",
   SEARCH_URL: "",
 };
