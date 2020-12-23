@@ -2,6 +2,9 @@
 
 This application allows the users to search OMDB for movies, and nominate the top 5 movies of their choices. 
 
+## Demo Link
+
+ https://movie-awards-nomination.herokuapp.com/
 
 ## App Features
 
