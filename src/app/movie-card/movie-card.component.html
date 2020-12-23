@@ -1,0 +1,18 @@
+<div class="grid-item">
+  <div class="img-blck">
+    <img src="{{ card.Poster }}" alt="{{ card.Title }}" />
+  </div>
+  <div class="cntnt-blck">
+    <span class="place-name">
+      {{ card.Title }}
+    </span>
+    <span class="place-desc">
+      {{ card.Year }}
+    </span>
+    <span class="nominate-movie">
+      <button (click)="onClickNominateBtn(card)" [class.nominated]="card.isNominated">
+        {{ card.isNominated ? "NOMINATED" : "NOMINATE" }}
+      </button>
+    </span>
+  </div>
+</div>

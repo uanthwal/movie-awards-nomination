@@ -1,0 +1,64 @@
+<div class="home-container">
+  <div
+    class="search-ip-block"
+    class="{{
+      searchResults?.length > 0 ? 'search-ip-top' : 'search-ip-center'
+    }}"
+  >
+    <form>
+      <input
+        type="text"
+        [(ngModel)]="searchText"
+        name="searchText"
+        placeholder="Search for movies...."
+        autocomplete="off"
+        required
+        (ngModelChange)="onChangeSearchIp()"
+      />
+      <div class="search-btn-block">
+        <button type="submit" (click)="onClickSearch('1')">Search</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="search-results-container">
+    <div class="grid-row">
+      <app-movie-card
+        *ngFor="let card of searchResults"
+        [card]="card"
+      ></app-movie-card>
+    </div>
+  </div>
+
+  <div
+    class="nominated-icon-container"
+    [class.bg-green]="showNominatedMovies && nominatedMovies?.length > 0"
+    (click)="onClickShowNominatedMovies()"
+  >
+    <div class="nominated-icon-block">
+      <img src="../../assets/nomination-icon.png" alt="nominate-icon" />
+    </div>
+  </div>
+
+  <div
+    *ngIf="showNominatedMovies && nominatedMovies?.length > 0"
+    class="nominated-list-container"
+  >
+    <div class="movie-block" *ngFor="let movie of nominatedMovies">
+      <div class="img-block">
+        <img class="img-item" src="{{ movie.Poster }}" alt="movie.Title" />
+      </div>
+      <div class="info-block">
+        <span class="span-item">{{ movie.Title }}</span>
+        <span class="span-item">{{ movie.Year }}</span>
+      </div>
+      <div class="delete-icon" (click)="onClickDelete(movie)">
+        <img
+          class="img-item"
+          src="../../assets/delete-icon.png"
+          alt="nominate-icon"
+        />
+      </div>
+    </div>
+  </div>
+</div>

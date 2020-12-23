@@ -1,0 +1,131 @@
+.home-container {
+  height: 100vh;
+  .search-ip-block {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    top: 40%;
+    transition: top 0.4s;
+    form {
+      text-align: center;
+      input[type="text"] {
+        padding: 25px;
+        height: 35px;
+        font-size: 35px;
+        border: 2px solid gray;
+        border-radius: 4px;
+        width: 40%;
+      }
+      .search-btn-block {
+        text-align: center;
+        margin-top: 10px;
+        button {
+          padding: 5px 20px;
+          background-color: #4caf50;
+          border: none;
+          color: white;
+          &:hover {
+            cursor: pointer;
+            border: 1px solid #4caf50;
+            color: #4caf50;
+            background-color: white;
+          }
+        }
+      }
+    }
+  }
+  .search-ip-top {
+    top: 5%;
+  }
+
+  .search-results-container {
+    position: relative;
+    top: calc(30px + 5%);
+    .grid-row {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      margin: 0px 5%;
+      app-movie-card {
+        margin: 1%;
+      }
+    }
+  }
+  .nominated-icon-container {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    background: white;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    box-shadow: 2px 0px 45px 0px #888888;
+    &.bg-green {
+      background-color: #4caf50;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+
+    .nominated-icon-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      img {
+        height: 55px;
+        width: 55px;
+      }
+    }
+  }
+  .nominated-list-container {
+    box-shadow: 2px 0px 45px 0px #888888;
+    position: fixed;
+    right: 30px;
+    bottom: 75px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    .movie-block {
+      display: flex;
+      border: 1px solid #a5a2a2;
+      margin: 5% 1%;
+      border-radius: 4px;
+      position: relative;
+      .img-block {
+        flex-basis: 30%;
+        img {
+          min-height: 100px;
+          max-height: 100px;
+          padding: 5px;
+        }
+      }
+      .info-block {
+        flex-basis: 70%;
+        span {
+          display: block;
+        }
+      }
+      .delete-icon {
+        position: absolute;
+        right: -10px;
+        top: -10px;
+        background: white;
+        background: red;
+        border-radius: 50%;
+        height: 25px;
+        width: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          height: 15px;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
