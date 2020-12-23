@@ -1,0 +1,65 @@
+.grid-item {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  flex-basis: 20%;
+  -ms-flex: auto;
+  width: 259px;
+  position: relative;
+  margin: 1%;
+  box-sizing: border-box;
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  .img-blck {
+    img {
+      border-radius: 5px 5px 0 0;
+      vertical-align: middle;
+      border-style: none;
+      min-height: 300px;
+      max-height: 300px;
+      width: 100%;
+    }
+  }
+  .cntnt-blck {
+    padding: 10px;
+    .place-name {
+      font-weight: 700;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .place-desc {
+      font-size: 11px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .nominate-movie {
+      justify-content: center;
+      display: flex;
+      button {
+        outline: none;
+        border: none;
+        background: #4caf50;
+        border-radius: 2px;
+        text-align: center;
+        font-size: 12px;
+        padding: 4px 20px;
+        color: white;
+        &:hover {
+          cursor: pointer;
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+        &.nominated {
+          background: #959695;
+        }
+      }
+    }
+  }
+}
